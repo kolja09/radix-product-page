@@ -1,0 +1,168 @@
+.productDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 50px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.thumbnailList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, border 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #0070f3;
+}
+
+.mainImageContainer {
+  margin-left: 20px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainImage {
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.productTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.productDescription {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.productPrice {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buttonCursor {
+  cursor: pointer;
+}
+
+.noResultsText {
+  font-weight: bold;
+}
+
+.goBack {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #0070f3;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.goBack:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1080px) {
+  .productDetails {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 15px;
+
+    max-width: 900px;
+  }
+
+  .thumbnail {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainImageContainer {
+    margin-left: 10px;
+  }
+
+  .mainImage {
+    max-width: 100%;
+    max-height: 400px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .productTitle {
+    font-size: 28px;
+  }
+
+  .productDescription {
+    font-size: 16px;
+  }
+
+  .productPrice {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productDetails {
+    padding: 30px 15px;
+  }
+
+  .mainImage {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .productTitle {
+    font-size: 24px;
+  }
+
+  .productDescription {
+    font-size: 14px;
+  }
+
+  .buttonCursor {
+    font-size: 16px;
+    height: 40px;
+  }
+}

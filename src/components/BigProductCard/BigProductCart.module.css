@@ -1,0 +1,173 @@
+.productCard {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: row;
+
+  max-width: 900px;
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.imageContainer {
+  border-radius: 12px 0 0 12px;
+
+  flex: 1;
+
+  max-width: 50%;
+
+  overflow: hidden;
+}
+
+.productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 25px;
+}
+
+.productTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.productDescription {
+  margin-bottom: 2rem;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttonCursor {
+  cursor: pointer;
+}
+
+.link {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #0070f3;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #005bb5;
+  text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+  .productInfo {
+    padding: 15px;
+  }
+
+  .productTitle {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  .productDescription {
+    margin-bottom: 0;
+  }
+
+  .optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .productInfo {
+    padding: 25px;
+  }
+
+  .productTitle {
+    font-size: 28px;
+  }
+
+  .optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productInfo {
+    padding: 15px;
+  }
+
+  .productTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .productDescription {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .buttonCursor {
+    height: 38px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 580px) {
+  .productCard {
+    flex-direction: column;
+    max-width: 480px;
+  }
+  .imageContainer {
+    max-width: 100%;
+  }
+
+  .productInfo {
+    flex: none;
+  }
+
+  .optionsContainer,
+  .options {
+    gap: 15px;
+  }
+}

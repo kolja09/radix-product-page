@@ -1,0 +1,184 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.closeButton {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cartItems {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.cartItems::-webkit-scrollbar {
+  display: none;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.productName {
+  flex: 2;
+  font-weight: bold;
+  color: #333;
+  word-break: break-word;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counterButton {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.counterButton:hover {
+  background-color: #0070f3;
+  color: white;
+}
+
+.counterButton:active {
+  background-color: #0070f3;
+  transform: scale(0.95);
+}
+
+.quantity {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.itemPrice {
+  width: 60px;
+  text-align: right;
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.noData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.emptyText {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footerButtons {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.clearButton {
+  flex: 1;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid #0090ff;
+  height: 40px;
+  color: #0090ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.clearButton:hover {
+  background-color: #0090ff;
+  color: white;
+}
+
+.checkoutButton {
+  flex: 1;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .footerButtons {
+    flex-direction: column;
+    gap: 10px;
+    height: 80px;
+  }
+}
